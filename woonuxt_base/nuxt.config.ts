@@ -33,10 +33,10 @@ export default defineNuxtConfig({
     },
   },
 
-  image: {
-    provider: 'ipx',
-    domains: process.env.NUXT_IMAGE_DOMAINS ? process.env.NUXT_IMAGE_DOMAINS.replace(/ /g, '').split(',') : [],
-  },
+  // image: {
+  //   provider: 'ipx',
+  //   domains: process.env.NUXT_IMAGE_DOMAINS ? process.env.NUXT_IMAGE_DOMAINS.replace(/ /g, '').split(',') : [],
+  // },
 
   hooks: {
     'pages:extend'(pages) {
