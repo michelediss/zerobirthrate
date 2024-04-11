@@ -1,6 +1,9 @@
 import { createResolver } from '@nuxt/kit';
 const { resolve } = createResolver(import.meta.url);
 
+// Debug: logga i domini configurati per @nuxt/image
+console.log("NUXT_IMAGE_DOMAINS", process.env.NUXT_IMAGE_DOMAINS ? process.env.NUXT_IMAGE_DOMAINS.replace(/ /g, '').split(',') : []);
+
 export default defineNuxtConfig({
   app: {
     head: {
