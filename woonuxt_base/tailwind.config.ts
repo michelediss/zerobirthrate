@@ -1,7 +1,7 @@
 //tailwind.config.ts
 
 import type { Config } from 'tailwindcss';
-const colors = require('./tailwindConf/colorPalette/colorPalette-2.json');
+// const colors = require('./tailwindConf/colorPalette/colorPalette-2.json');
 
 import { generateResponsiveBaseFontSize, generateTypographicScale } from './typography';
 import { addGoogleFontsLink } from './fonts';
@@ -31,7 +31,7 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        ...colors,
+        // ...colors,
         primary: {
           light: '#AE7DDD',
           DEFAULT: process.env.PRIMARY_COLOR || '#7F54B2',
