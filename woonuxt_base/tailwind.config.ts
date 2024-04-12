@@ -3,8 +3,8 @@
 import type { Config } from 'tailwindcss';
 // const colors = require('./tailwindConf/colorPalette/colorPalette-2.json');
 
-import { generateResponsiveBaseFontSize, generateTypographicScale } from './typography';
-import { addGoogleFontsLink } from './fonts';
+import { generateResponsiveBaseFontSize, generateTypographicScale } from './tailwindConf/logic/typography.js';
+import { addGoogleFontsLink } from './tailwindConf/logic/fonts.js';
 
 const fontFamily = require('./tailwindConf/fontPairing/fontFamily-1.json');
 const typographyConfig = require('./tailwindConf/typographyConfig.json');
@@ -16,6 +16,8 @@ if (typeof document !== "undefined") {
 const responsiveBaseFontSize = generateResponsiveBaseFontSize(typographyConfig.responsiveBaseFontSize.baseSize, typographyConfig.responsiveBaseFontSize.incrementFactor);
 const customFontSizeScale = generateTypographicScale(typographyConfig.customFontSizeScale.f0, typographyConfig.customFontSizeScale.r, typographyConfig.customFontSizeScale.n, typographyConfig.customFontSizeScale.count);
 
+// debug
+console.log("Colors defined:", theme.extend.colors);
 
 export default <Partial<Config>>{
   content: [
@@ -39,10 +41,10 @@ export default <Partial<Config>>{
         },
       },
       fontFamily: {
-        'primary': fontFamily.primary,
+        'primary': fontFamily.primaryFamily,
         'primary-weight': fontFamily.primaryWeight,
         'primary-height': fontFamily.primaryHeight,
-        'secondary': fontFamily.secondary,
+        'secondary': fontFamily.secondaryFamily,
         'secondary-weight': fontFamily.secondaryWeight,
         'secondary-height': fontFamily.secondaryHeight,
       },
