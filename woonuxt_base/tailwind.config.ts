@@ -32,11 +32,11 @@ export default <Partial<Config>>{
     extend: {
       colors: {
         ...colors,
-        // primary: {
-        //   light: '#AE7DDD',
-        //   DEFAULT: process.env.PRIMARY_COLOR || '#7F54B2',
-        //   dark: '#754fa3',
-        // },
+        primary: {
+          light: '#AE7DDD',
+          DEFAULT: process.env.PRIMARY_COLOR || '#7F54B2',
+          dark: '#754fa3',
+        },
       },
       fontFamily: {
         'primary': fontFamily.primary,
