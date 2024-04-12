@@ -1,0 +1,9 @@
+{
+  "url": ["https://fonts.googleapis.com/css?family=PT+Sans:700|Playfair+Display"],
+  "primary": ["PT Sans", "sans-serif"],
+  "primaryWeight": "700",
+  "primaryHeight": "1.35",
+  "secondary": ["Playfair Display", "serif"],
+  "secondaryWeight": "400",
+  "secondaryHeight": "1.5"
+}

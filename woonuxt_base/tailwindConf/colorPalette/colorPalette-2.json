@@ -1,0 +1,37 @@
+{
+  "primary": {
+    "primary-100": "#66637c",
+    "primary-200": "#66637c",
+    "primary-300": "#66637c",
+    "primary-400": "#66637c",
+    "primary-500": "#66637c",
+    "primary-600": "#66637c",
+    "primary-700": "#66637c",
+    "primary-800": "#66637c",
+    "primary-900": "#66637c"
+  },
+  "secondary": {
+    "secondary-100": "#66637c",
+    "secondary-200": "#66637c",
+    "secondary-300": "#66637c",
+    "secondary-400": "#66637c",
+    "secondary-500": "#66637c",
+    "secondary-600": "#66637c",
+    "secondary-700": "#66637c",
+    "secondary-800": "#66637c",
+    "secondary-900": "#66637c"
+  },
+  "grayscale": {
+    "gray-50": "#66637c",
+    "gray-100": "#66637c",
+    "gray-200": "#66637c",
+    "gray-300": "#66637c",
+    "gray-400": "#66637c",
+    "gray-500": "#66637c",
+    "gray-600": "#66637c",
+    "gray-700": "#66637c",
+    "gray-800": "#66637c",
+    "gray-900": "#66637c",
+    "gray-950": "#66637c"
+  }
+}

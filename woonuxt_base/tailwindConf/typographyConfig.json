@@ -1,0 +1,12 @@
+{
+  "responsiveBaseFontSize": {
+    "baseSize": 15,
+    "incrementFactor": 1.02
+  },
+  "customFontSizeScale": {
+    "f0": 1,
+    "r": 1.333,
+    "n": 4,
+    "count": 11
+  }
+}
