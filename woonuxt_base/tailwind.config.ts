@@ -1,5 +1,7 @@
+//tailwind.config.ts
+
 import type { Config } from 'tailwindcss';
-const colors = require('./tailwindConf/colorPalette/colorPalette-1.json');
+const colors = require('./tailwindConf/colorPalette/colorPalette-2.json');
 
 import { generateResponsiveBaseFontSize, generateTypographicScale } from './typography';
 import { addGoogleFontsLink } from './fonts';
