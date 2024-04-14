@@ -1,6 +1,6 @@
 //tailwind.config.ts
 
-import type { Config } from 'tailwindcss';
+// import type { Config } from 'tailwindcss';
 // const colors = require('./tailwindConf/colorPalette/colorPalette-2.json');
 
 import { generateResponsiveBaseFontSize, generateTypographicScale } from './tailwindConf/logic/typography.js';
@@ -54,7 +54,7 @@ export default <Partial<Config>>{
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    // require('@tailwindcss/typography'),
     function({ addBase }) {
       addBase(generateResponsiveBaseFontSize(typographyConfig.responsiveBaseFontSize.baseSize, typographyConfig.responsiveBaseFontSize.incrementFactor));
     },
