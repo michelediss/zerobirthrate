@@ -1,80 +1,24 @@
-//tailwind.config.ts
-
 import type { Config } from 'tailwindcss';
-// const colors = require('./tailwindConf/colorPalette/colorPalette-2.json');
-
-import { generateResponsiveBaseFontSize, generateTypographicScale } from './tailwindConf/logic/typography.js';
-import { addGoogleFontsLink } from './tailwindConf/logic/fonts.js';
-
-const fontFamily = require('./tailwindConf/fontPairing/fontFamily-1.json');
-const typographyConfig = require('./tailwindConf/typographyConfig.json');
-
-if (typeof document !== "undefined") {
-  addGoogleFontsLink(fontFamily.url[0]);
-}
-
-const responsiveBaseFontSize = generateResponsiveBaseFontSize(typographyConfig.responsiveBaseFontSize.baseSize, typographyConfig.responsiveBaseFontSize.incrementFactor);
-const customFontSizeScale = generateTypographicScale(typographyConfig.customFontSizeScale.f0, typographyConfig.customFontSizeScale.r, typographyConfig.customFontSizeScale.n, typographyConfig.customFontSizeScale.count);
-
-// debug
-console.log("Colors defined:", theme.extend.colors);
 
 export default <Partial<Config>>{
-  content: [
-    './public/**/*.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
-    './components/**/*.{js,vue,ts}', 
-    './layouts/**/*.vue', 
-    './pages/**/*.vue', 
-    './plugins/**/*.{js,ts}', 
-    './nuxt.config.{js,ts}', 
-    './app.vue'
-  ],
+  content: ['./components/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './app.vue'],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     extend: {
       colors: {
-        // ...colors,
         primary: {
           light: '#AE7DDD',
           DEFAULT: process.env.PRIMARY_COLOR || '#7F54B2',
           dark: '#754fa3',
         },
       },
-      fontFamily: {
-        'primary': fontFamily.primaryFamily,
-        'primary-weight': fontFamily.primaryWeight,
-        'primary-height': fontFamily.primaryHeight,
-        'secondary': fontFamily.secondaryFamily,
-        'secondary-weight': fontFamily.secondaryWeight,
-        'secondary-height': fontFamily.secondaryHeight,
-      },
-      fontSize: {
-        ...generateTypographicScale(typographyConfig.customFontSizeScale.f0, typographyConfig.customFontSizeScale.r, typographyConfig.customFontSizeScale.n, typographyConfig.customFontSizeScale.count)
-      },
       screens: {
         '2xl': '1400px',
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    function({ addBase }) {
-      addBase(generateResponsiveBaseFontSize(typographyConfig.responsiveBaseFontSize.baseSize, typographyConfig.responsiveBaseFontSize.incrementFactor));
-    },
-    function({ addUtilities, theme }) {
-      const newFontUtilities = {
-        '.font-primary': {
-          fontFamily: theme('fontFamily.primary').toString(),
-          fontWeight: theme('fontFamily.primary-weight').toString(),
-          lineHeight: theme('fontFamily.primary-height').toString(),
-        },
-        '.font-secondary': {
-          fontFamily: theme('fontFamily.secondary').toString(),
-          fontWeight: theme('fontFamily.secondary-weight').toString(),
-          lineHeight: theme('fontFamily.secondary-height').toString(),
-        },
-      };
-      addUtilities(newFontUtilities, ['responsive']);
-    },
-  ],
+  plugins: [require('@tailwindcss/typography')],
 };
