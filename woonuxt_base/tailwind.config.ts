@@ -16,9 +16,6 @@ if (typeof document !== "undefined") {
 const responsiveBaseFontSize = generateResponsiveBaseFontSize(typographyConfig.responsiveBaseFontSize.baseSize, typographyConfig.responsiveBaseFontSize.incrementFactor);
 const customFontSizeScale = generateTypographicScale(typographyConfig.customFontSizeScale.f0, typographyConfig.customFontSizeScale.r, typographyConfig.customFontSizeScale.n, typographyConfig.customFontSizeScale.count);
 
-// debug
-console.log("Colors defined:", theme.extend.colors);
-
 export default <Partial<Config>>{
   content: [
     './public/**/*.html',
@@ -32,14 +29,14 @@ export default <Partial<Config>>{
   ],
   theme: {
     extend: {
-      colors: {
+      // colors: {
         // ...colors,
-        primary: {
-          light: '#AE7DDD',
-          DEFAULT: process.env.PRIMARY_COLOR || '#7F54B2',
-          dark: '#754fa3',
-        },
-      },
+        // primary: {
+        //   light: '#AE7DDD',
+        //   DEFAULT: process.env.PRIMARY_COLOR || '#7F54B2',
+        //   dark: '#754fa3',
+        // },
+      // },
       fontFamily: {
         'primary': fontFamily.primaryFamily,
         'primary-weight': fontFamily.primaryWeight,
